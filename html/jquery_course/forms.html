@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Forms</title>
+</head>
+
+<body>
+
+  <form name="form1" action="/action_page.php" target="_blank" method="POST" novalidate>
+    <fieldset>
+      <legend>Forms 1:</legend>
+      <fieldset>
+        <legend>Textbox:</legend>
+        <br>
+        <label>First name:</label>
+        <input type="text" name="nick" placeholder="nick" maxlength="5">
+        <br>
+        <label>First name:</label>
+        <input type="text" name="firstname" placeholder="firstName" readonly>
+        <br>
+        <label>Password:</label>
+        <input type="password" name="password" size="40" required>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Radio:</legend>
+        <input type="radio" name="gender" value="male" checked> Male
+        <br>
+        <input type="radio" name="gender" value="female"> Female
+        <br>
+        <input type="radio" name="gender" value="other"> Other
+        <br>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Select:</legend>
+        <select name="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br>
+        <select name="cars2" size="3">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br>
+        <select name="cars3" size="4" multiple>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <br>
+      </fieldset>
+      <fieldset>
+        <legend>Checkbox:</legend>
+        <input type="checkbox" name="vehicle1" value="Bike"> I have a bike
+        <br>
+        <input type="checkbox" name="vehicle2" value="Car"> I have a car
+      </fieldset>
+      <fieldset>
+        <legend>Textbox:</legend>
+        <textarea name="message" rows="3" cols="20">
+          The cat was playing in the garden.
+        </textarea>
+      </fieldset>
+      <hr>
+      <input type="submit" value="Submit">
+      <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+      <input type="reset">
+    </fieldset>
+  </form>
+  <br>
+  <br>
+  <form action="/user/add" accept-charset="UTF-8" method="POST" name="form2" target="_blank" autocomplete="on">
+    <fieldset>
+      <legend>Form 2:</legend>
+      <fieldset disabled="disabled">
+        <legend>Personal information:</legend>
+        First name:
+        <br>
+        <input type="text" name="firstname" value="Mickey" autocomplete="off">
+        <br> Last name:
+        <br>
+        <input type="text" name="lastname" value="Mouse">
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+      </fieldset>
+      <fieldset>
+        <legend>HTML 5</legend>
+        <input list="browsers" autofocus>
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+            <option value="Firefox">
+              <option value="Chrome">
+                <option value="Opera">
+                  <option value="Safari">
+        </datalist>
+      </fieldset>
+      <fieldset oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <legend>Output:</legend>
+        <input type="range" id="a" name="a" value="50"> 100 +
+        <input type="number" id="b" name="b" value="50"> =
+        <output name="x" for="a b"></output>
+      </fieldset>
+      <fieldset>
+        <legend>HTML5 input types:</legend>
+        Select your favorite color:
+        <input type="color" name="favcolor">
+        <br> Birthday:
+        <input type="date" name="bday">
+        <br>
+        <br> Enter a date before 1980-01-01:
+        <input type="date" name="bday" max="1979-12-31">
+        <br> Enter a date after 2000-01-01:
+        <input type="date" name="bday" min="2000-01-02">
+        <br>
+        <br> Birthday (date and time):
+        <input type="datetime-local" name="bdaytime">
+        <br> Birthday (month and year):
+        <input type="month" name="bdaymonth">
+        <br>
+        Select a week:
+        <input type="week" name="week_year">
+        <br> E-mail:
+        <input type="email" name="email">
+        <br> Quantity (between 1 and 5):
+        <input type="number" name="quantity" min="1" max="10">
+        <br> Quantity:
+        <input type="number" name="points" min="0" max="100" step="10" value="30">
+        <br>
+        <div oninput="points_out.value=parseInt(points.value)">
+          <input type="range" id="points" min="0" max="10">
+          <output id="points_out"></output>
+        </div>
+        <br>
+        Search Google:
+        <input type="search" name="googlesearch">
+        <br>
+        Telephone:
+        <input type="tel" name="usrtel">
+        <br>
+        Select a time:
+        <input type="time" name="usr_time">
+        <br>
+        Add your homepage:
+        <input type="url" name="homepage">
+        <br>
+        Select images: <input type="file" name="img" multiple>
+        <br>
+        Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+      </fieldset>
+      <input type="submit" value="Submit">
+      <input type="submit" formaction="admin/add"
+      value="Submit as admin">
+      <!-- form-data that is default encoded -->
+      <input type="submit" formenctype="multipart/form-data"
+      value="Submit as Multipart/form-data">
+      <input type="submit" formmethod="get" value="Submit using GET">
+      <input type="submit" formnovalidate value="Submit without validation">
+      <input type="submit" formtarget="_blank" value="Submit to a new window">
+      <input type="image" src="https://picsum.photos/60/60" alt="Submit" width="60" height="60">
+    </fieldset>
+  </form>
+  <br>
+  <form id="form3" action="">
+    <fieldset oninput="x.value=parseInt(a.value)*parseInt(b.value)">
+      <legend>Range:</legend>
+      <input type="range" id="a" name="a" value="50"> 100 +
+      <input type="number" id="b" name="b" value="50"> =
+      <output name="x" for="a b"></output>
+    </fieldset>
+    <fieldset oninput="y.value=(parseInt(c.value)+parseInt(d.value))*0.23">
+      <legend>Range:</legend>
+      <input type="range" id="c" value="50"> 100 +
+      <input type="number" id="d" value="50"> =
+      <output id="y"></output>
+    </fieldset>
+  </form>
+  Last name: <input type="text" name="lname" form="form3">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.highlight{
+    outline: red solid 2px;
+}

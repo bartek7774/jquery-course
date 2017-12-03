@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  /* border:2px solid pink; */
+}
+nav a{
+  font-size: 30px;
+  text-decoration: none;
+  color: rgb(124, 124, 124);
+  font-family: 'Ubuntu Condensed', sans-serif;
+  border-bottom: 2px solid #5ca;
+  margin: 15px; 
+  transition: color 0.7s ease-out;
+}
+
+nav a>i{
+  margin-right: 10px;
+}
+
+nav a:hover{
+  color: #39d;
+  border-bottom-color: #39d;
+}
+
+@media screen and (max-width: 800px){
+  nav{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px){
+  nav{
+    flex-direction: column;
+    align-items: center;
+    background: #345;
+  }
+  nav a{
+    color: white;
+  }
+}
