@@ -57,6 +57,18 @@ function extractValue(arr, key) {
 
 console.log(extractValue(people, 'last'));
 
+function groupBy(array, key) {
+  return array.reduce(function (accumulator, nextValue) {
+    if (nextValue[key] in accumulator) {
+      accumulator[nextValue[key]]++;
+    } else {
+      accumulator[nextValue[key]] = 1;
+    }
+    return accumulator;
+  }, {});
+};
+
+
 function vowelCount(str) {
   let vowels = "aeiou";
   return str.split('').reduce((acc, next) => {

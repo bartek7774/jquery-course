@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>jQuery methods</title>
+</head>
+
+<body>
+
+  <div class="content">
+    <div id="result"></div>
+    <div class="options">
+      <input type="text" name="tag" placeholder="tag">
+      <select name="age">
+      </select>
+      <div oninput="x.value=parseInt(seconds.value)">
+        <input type="range" id="seconds" value="20" min="10" max="30" step="2">
+        <output id="x">20</output>
+      </div>
+      <button type="button" id="next">Next</button>
+      <button type="button" id="start">Start</button>
+      <button type="button" id="stop">Stop</button>
+    </div>
+    <div class="buttons">
+      <button id="post">Get POST</button>
+      <button id="get">Get GET</button>
+      <button id="json">Get JSON</button>
+      <button id="ajax">Ajax</button>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
