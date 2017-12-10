@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+p{
+  width: 10vw;
+  height: 10vw;
+  background: teal;
+  cursor: pointer;
+  transition: flex-grow 2s ease 1s;
+}
+
+/* Transition property:
+  transition-duration
+  transition-property
+  transition-timing-function
+  transition-delay */
+
+/* p:hover{
+  background: rgb(63, 22, 209);
+  transform-origin: left top;
+  transform: scale(1.5);
+  opacity: .6;
+  border-radius: 50%;
+} */
+/* .animated{
+  transition-property: transform,background-color, border-radius;
+  transition-duration: 1s,1s,1s;
+  transition-delay: 25ms,2s,1s;
+  transition-timing-function:  ease-in;
+} */
+
+p:hover{
+  background-color: darkred;
+  /* transform: translateX(200px); */
+  flex-grow: 1;
+}
+
+.animated{
+  /* transition-duration: 2s;
+  transition-property: transform,background-color;
+  transition-timing-function: cubic-bezier(0.350, 0.100, 0.480, 1.290);
+  transition-delay: 1s; */
+  transition:  
+    flex-grow 2s ease-in-out .5s,
+    background-color 1s ease-in;
+}

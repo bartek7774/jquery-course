@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+p{
+  background: teal;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(2, 46, 46);
+}
+
+p.circle{
+  outline: nonoe;
+  background: white;
+  border-width: 10px;
+  border-style: 10px solid;
+  border-radius: 50%;
+  border-bottom-color: darkorange;
+  border-top-color: darkorange;
+  border-left-color: wheat;
+  border-right-color: wheat;
+  transition: all 1s ease-out;
+}
+p.circle:hover{
+  transform: rotate(1turn);
+}
+p.d3{
+  color: wheat;
+  text-align: center;
+  align-content: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  transition: all 1s ease-out;
+}
+p.d3:hover{
+  transform: rotateY(45deg) 
+  scale(0.7);
+}
+
+p.move-right{
+  transform: translateX(200px);
+}
+
+p.move-left{
+  /* transform: translateX(-200px); */
+  transform: rotate(45deg);
+}
+p.move-down{
+  transform: translateY(20px);
+}
+p.enlarge{
+   /* transform: scale(1.5); */
+  /* transform: scaleX(1.5); */
+  transform: scale(2,1.2);
+  transform-origin: 0 0;
+}
+/* initially it scales across center point of origin position */
+p.shrink{
+  transform: scale(0.5);
+  transform-origin: left bottom;
+}
