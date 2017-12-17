@@ -1,0 +1,95 @@
+/* Colors 
+#yellow rgba(255, 191, 0, 1);
+#red rgba(221, 31, 31, 1);
+#wheat rgba(255, 255, 255, 0.795);
+#blue rgba(34, 116, 165, 1);
+#green rgba(50, 147, 111, 1);
+*/
+
+/* Gobal styles
+-------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+h1,
+h2 {
+  font-family: "Caveat", cursive;
+  font-weight: 400;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+a {
+  color: rgba(255, 191, 0, 1);
+}
+a:hover {
+  text-decoration: none;
+}
+.content-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: auto;
+}
+.col-narrow{
+  float: left;
+  width: 30%;
+  min-height: 180px;
+}
+.col-wide{
+  float: left;
+  width: 70%;
+  padding-left: 30px;
+  min-height: 180px;
+}
+/* Header and footer
+-------------------------*/
+.profile-img {
+  border-radius: 50%;
+}
+header,
+footer {
+  background: rgba(34, 116, 165, 1);
+  color: rgba(255, 255, 255, 0.795);
+}
+
+/* header */
+header h1,
+header h2 {
+  color: rgba(255, 255, 255, 0.795);
+  margin: 0;
+}
+
+/* footer */
+footer {
+  text-align: center;
+}
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Work Experience
+-------------------------*/
+.work {
+  background: rosybrown;
+}
+
+/* Education
+-------------------------*/
+.education {
+  background: rgba(50, 147, 111, 1);
+}
