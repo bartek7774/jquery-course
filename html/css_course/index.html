@@ -5,14 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>CSS Course</title>
 </head>
 
 <body>
   <!-- Intro -->
-  <header>
+  <header id="home">
+    <a href="resume.pdf" class="btn download" download>Download PDF</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#work">Work Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <div class="content-wrap">
       <img class="profile-img col-narrow" src="img/face.jpg" alt="Your Name">
       <div class="col-wide">
@@ -26,17 +35,17 @@
   </header>
   <main>
     <!-- Work Experience -->
-    <section class="work">
+    <section id="work" class="work">
       <div class="content-wrap">
         <h2>Work Experience</h2>
 
         <!-- Job Details -->
         <div class="col-narrow">
           <h3>Job title 1</h3>
-          <p>Ubunut</p>
+          <p class="uppercase">Ubunut</p>
           <p>Date at job</p>
         </div>
-        <div class="col-wide">
+        <div class="col-wide job-description">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, totam! Maxime, beatae. </p>
           <p>Lorem ipsum dolor sit
             <a href="#" target="_blank">amet consectetur</a>, adipisicing elit. Ducimus, quisquam.</p>
@@ -44,27 +53,33 @@
         <!-- Job Details -->
         <div class="col-narrow">
           <h3>Job title 1</h3>
-          <p>Microsoft</p>
+          <p class="uppercase">Microsoft</p>
           <p>Date at job</p>
         </div>
-        <div class="col-wide">
+        <div class="col-wide job-description">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, totam! Maxime, beatae. Ea veritatis deleniti necessitatibus
             similique nisi exercitationem nemo odio molestias!</p>
+          <p>Job summary.</p>
+          <p>Optional list:</p>
+          <ul>
+            <li>Created...</li>
+            <li>Lead...</li>
+            <li>Reposible for</li>
+          </ul>
           <p>Lorem ipsum dolor sit
             <a href="#" target="_blank">amet consectetur</a>, adipisicing elit. Ducimus, quisquam.</p>
         </div>
-        <p>Job summary.</p>
-        <p>Optional list:</p>
-        <ul>
-          <li>Created...</li>
-          <li>Lead...</li>
-          <li>Reposible for</li>
-        </ul>
       </div>
     </section>
-    <section class="education">
+    <section id="education" class="education">
       <div class="content-wrap">
         <h2>Education</h2>
+        <h3>School name, year you attended.</h3>
+        <p>Designation received</p>
+        <p>Summary.</p>
+        <h3>School name, year you attended.</h3>
+        <p>Designation received</p>
+        <p>Summary.</p>
         <h3>School name, year you attended.</h3>
         <p>Designation received</p>
         <p>Summary.</p>
@@ -72,15 +87,30 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="contact">
     <div class="content-wrap">
       <h2>Let's Keep in Touch!</h2>
       <div class="contact-info">
-        <a href="mailto:bgajdkos@gmail.com">Email</a>
-        <a href="#">My website</a>
-        <a href="#" target="_blank">Twitter</a>
-        <a href="#" target="_blank">LinkedIn</a>
-        <a href="#" target="_blank">Facebook</a>
+        <a href="mailto:bgajdkos@gmail.com">
+          <i aria-hidden class="fas fa-at fa-2x" title="Email"></i>
+          <span class="sr-only">Email</span>
+        </a>
+        <a href="#">
+          <i aria-hidden class="fas fa-home fa-2x" title="MySite"></i>
+          <span class="sr-only">MySite</span>
+        </a>
+        <a href="#" target="_blank">
+          <i aria-hidden class="fab fa-twitter fa-2x" title="Twitter"></i>
+          <span class="sr-only">Twitter</span>
+        </a>
+        <a href="#" target="_blank">
+          <i aria-hidden class="fab fa-linkedin fa-2x" title="LinkedIn"></i>
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="#" target="_blank">
+          <i aria-hidden class="fab fa-facebook fa-2x" title="Facebook"></i>
+          <span class="sr-only">Facebook</span>
+        </a>
       </div>
       <p>Copyright 2017 by BarteX</p>
     </div>
